@@ -762,8 +762,8 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     /**
      * set Typeface for all item TextView
      *
-     * @attr ref android.R.styleable#TextView_typeface
-     * @attr ref android.R.styleable#TextView_textStyle
+     * @typeface ref android.R.styleable#TextView_typeface
+     * @style ref android.R.styleable#TextView_textStyle
      */
     public void setTypeface(Typeface typeface, int style) {
         int count = getItemCount();

@@ -1,15 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
-
+    compileSdkVersion rootProject.ext.COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.ext.BUILD_TOOLS_VERSION
     defaultConfig {
         applicationId "com.ittianyu.bottomnavigationviewexsample"
-        minSdkVersion 14
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 17
-        versionName "1.2.3"
+        minSdkVersion rootProject.ext.MIN_SDK_VERSION
+        targetSdkVersion rootProject.ext.TARGET_SDK_VERSION
+        versionCode rootProject.ext.BOTTOMNAVIGATIONVIEWEX_VERSIONCODE
+        versionName rootProject.ext.BOTTOMNAVIGATIONVIEWEX_VERSIONNAME
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -24,19 +23,19 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.LIB_VERSION"
 
-    testCompile 'junit:junit:4.12'
-    compile project(':widget')
+    testImplementation 'junit:junit:4.12'
+    implementation project(':widget')
     // leakcanary
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    implementation "com.android.support:design:$rootProject.ext.LIB_VERSION"
     // badge
-    compile 'q.rorbin:badgeview:1.1.0'
+    implementation 'q.rorbin:badgeview:1.1.0'
 }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:node="replace"
     package="com.ittianyu.bottomnavigationviewexsample">
 
     <application
@@ -18,14 +20,15 @@
         </activity>
         <activity android:name=".features.style.StyleActivity" />
         <activity
-            android:name=".features.viewpager.WithViewPagerActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:name=".features.viewpager.WithViewPagerActivity" />
         <activity
-            android:name=".features.setupwithviewpager.SetupWithViewPagerActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:name=".features.setupwithviewpager.SetupWithViewPagerActivity" />
         <activity android:name=".features.badgeview.BadgeViewActivity"/>
         <activity android:name=".features.centerfab.CenterFabActivity"/>
-
+        <meta-data
+            tools:node="replace"
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
     </application>
 
 </manifest>
