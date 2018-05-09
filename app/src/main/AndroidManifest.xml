@@ -28,7 +28,7 @@
         <meta-data
             tools:node="replace"
             android:name="android.support.VERSION"
-            android:value="26.1.0" />
+            android:value="25.4.0" />
     </application>
 
 </manifest>
