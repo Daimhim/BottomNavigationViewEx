@@ -30,7 +30,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$rootProject.ext.LIB_VERSION"
 
     testImplementation 'junit:junit:4.12'
-    implementation project(':widget')
+    implementation 'org.daimhim.widget:widget:1.0.1'
     // leakcanary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
